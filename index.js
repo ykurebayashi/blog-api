@@ -9,7 +9,6 @@ app.use(bodyParser.json());
 
 // Debug that the server is running
 app.listen(3001, () => {
-  console.log(process.env.MYSQL_PASSWORD);
   console.log('O app está rodando na porta 3001');
 });
 
