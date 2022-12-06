@@ -1,10 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const postsController = require('./Endpoints/3_Controller/postsController');
-
-require('dotenv').config();
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 
 // Debug that the server is running
@@ -14,3 +14,6 @@ app.listen(3001, () => {
 
 // Get all posts endpoint
 app.get('/', postsController.getAllPostsController);
+
+// Get single post endpoint
+app.get('/:id', postsController.getSinglePostController);
