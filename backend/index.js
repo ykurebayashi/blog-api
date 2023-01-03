@@ -17,3 +17,6 @@ app.get('/', postsController.getAllPostsController);
 
 // Get single post endpoint
 app.get('/:id', postsController.getSinglePostController);
+
+// Create a single post
+app.post('/create-post', postsController.createSinglePostController);

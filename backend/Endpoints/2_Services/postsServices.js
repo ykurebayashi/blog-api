@@ -10,4 +10,13 @@ const getSinglePostService = async (id) => {
   return post;
 };
 
-module.exports = { getAllPostsService, getSinglePostService };
+const createSinglePostService = async (values) => {
+  const create = await models.createSinglePost(values);
+  return create;
+};
+
+module.exports = {
+  getAllPostsService,
+  getSinglePostService,
+  createSinglePostService,
+};
